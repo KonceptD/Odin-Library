@@ -1,3 +1,4 @@
+// * TODO: CHECK FREECODECAMP AS AN ALTERNATE FOR PRACTICE
 
 // My library array
 let myLibrary = [];
@@ -5,7 +6,7 @@ let myLibrary = [];
 // Creating am object with a function in it to display info
 function Book(title, author, pages, complete) {
     this.title = title
-    this.author = author
+    this.author = author 
     this.pages = pages
     this.complete = complete
     this.info = function() {
