@@ -1,4 +1,13 @@
 // * TODO: CHECK FREECODECAMP AS AN ALTERNATE FOR PRACTICE
+// 
+
+// Grabbed my button to add new book and the div containing the form
+const popUp = document.querySelector("#popUp")
+const popUpbtn = document.querySelector("#new_book_button") 
+
+popUp.addEventListener("click", (e) => {
+    e.style.display = "block"
+})
 
 // My library array
 let myLibrary = [];
