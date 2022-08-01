@@ -14,11 +14,12 @@ let bookPages = document.querySelector("#book_pages")
 let bookFinish = document.querySelector("#book_finished")
 
 saveBtn.addEventListener("click", () => {
-
+     
     let newBook = bookTitle.value
     newBook = new Book (bookTitle.value, bookAuthor.value, bookPages.value, bookFinish.value)
     addToLibrary(newBook);
     clearForm();
+    
     displayLibrary();
 })
 
