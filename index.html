@@ -7,35 +7,64 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <h1>Personal Library</h1>
+    <p>For the Odin Project - by KonceptD</p>
+
 </head>
 <body>
     <button id="new_book_button">
         New Book
     </button>
     <div id="popUp">
-        <form class="popUp" action="/index.html" method="post">
+        <form class="popUp">
             <ul>
                 <li>
-                    <label for="book_title">Book Title</label>
-                    <input type="text" id="book_title" name="book_name">
+                    
+                    <input type="text" id="book_title" name="book_name" placeholder="Title" value="" required>
+
+                    <input type="text" id="book_author" name="book_author" placeholder="Author" value="">
+
+                    <input type="number" id="book_pages" name="book_page_total" placeholder="Pages" value="">
+ 
+                    <input type="text" id="book_finished" name="book_finished" placeholder="Read?" value="">
                 </li>
-                <li>
-                    <label for="book_author">Author</label>
-                    <input type="text" id="book_author" name="book_author">
-                </li>
-                <li>
-                    <label for="book_pages">Number of Pages</label>
-                    <input type="number" id="book_pages" name="book_page_total">
-                </li>
-                <li>
-                    <label for="book_finished">Complete?</label>
-                    <input type="text" id="book_finished" name="book_finished">
-                </li>
-                <li class="button">
-                    <button type="submit">Save</button>
-                </li>
+                
+                    <button id="saveButton" type="button">Save</button>
+                
             </ul>
         </form>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Author</th>
+                    <th>Pages</th>
+                    <th>Read</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button>
+                            Change Read Status
+                        </button>
+                    </td>
+                    <td>
+                        <button>
+                            Delete Book
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
