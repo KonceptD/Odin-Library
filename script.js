@@ -8,18 +8,21 @@ const saveBtn = document.querySelector("#saveButton")
 // popUp.addEventListener("click", (e) => {
 //     e.style.display = "block"
 // })
+
+// Assigning each textbox content to a variable
 let bookTitle = document.querySelector("#book_title")
 let bookAuthor = document.querySelector("#book_author")
 let bookPages = document.querySelector("#book_pages")
 let bookFinish = document.querySelector("#book_finished")
 
+// E.Listener which creates and adds book to library
 saveBtn.addEventListener("click", () => {
      
     let newBook = bookTitle.value
     newBook = new Book (bookTitle.value, bookAuthor.value, bookPages.value, bookFinish.value)
     addToLibrary(newBook);
     clearForm();
-    
+
     displayLibrary();
 })
 
