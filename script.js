@@ -1,5 +1,10 @@
 // * TODO: CHECK FREECODECAMP AS AN ALTERNATE FOR PRACTICE
 // TODO: New book button that brings up the form from each display
+// TODO: Write each book to table row
+// TODO: Add delete button functionality
+// TODO: Add "Read/Unread" button functionality
+// TODO: CSS - Style for table - Center table
+// TODO: HTML: Column size - maybe 3 width?
 
 // Grabbed my button to add new book and the div containing the form
 const popUp = document.querySelector("#popUp")
