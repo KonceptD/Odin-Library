@@ -1,6 +1,6 @@
 // * TODO: CHECK FREECODECAMP AS AN ALTERNATE FOR PRACTICE
 // * TODO: New book button that brings up the form from each display - LEARNT: How to toggle elements between hidden and visible using classlist.toggle and the "hidden" attribute
-// TODO: Write each book to table row
+// TODO: Write each book to table row OR append each object Book to a new div
 // TODO: Add delete button functionality
 // TODO: Add "Read/Unread" button functionality
 // TODO: CSS - Style for table - Center table
