@@ -10,7 +10,6 @@
  
 }
 
-
 form {
     /* Center the form on the page */
     margin: 0 auto;
@@ -21,4 +20,6 @@ form {
     border-radius: 1em;
   }
   
-  
+  .hidden {
+    display: none; /* Hides elements with this class name */
+  }
