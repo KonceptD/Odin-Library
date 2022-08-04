@@ -73,34 +73,30 @@ toggle = () => {
     newBookBtn.classList.toggle("hidden")
 }
 
-
+// Currently grabs the last book object, makes a new row, writes each key value to a new cell and appends 
+// each cell to the row and then appends the row to the table. It isn't a clean way and I don't like it.
 displayBook = () => {
 
-    // let div = document.createElement("row")
-    // let divTwo = document.createElement("row")
-    // createdBook.bookTitle, createdBook.bookAuthor, createdBook.bookPages, createdBook.bookFinish
     let obj = myLibrary.slice(-1)[0]
     let newRow = document.createElement("tr")
-//     div.textContent = obj.title
-//     container.appendChild(div);
-//     divTwo.textContent = obj.author
-//     container.appendChild(divTwo);
+
     let cellOne = document.createElement("td")
     cellOne.textContent = obj.title
     newRow.appendChild(cellOne)
-    //cellOne.appendChild(obj.title)
+
     let cellTwo = document.createElement("td")
     cellTwo.textContent = obj.author
     newRow.appendChild(cellTwo)
+
     let cellThree = document.createElement("td")
     cellThree.textContent = obj.pages
     newRow.appendChild(cellThree)
+
     let cellFour = document.createElement("td")
     cellFour.textContent = obj.complete
     newRow.appendChild(cellFour)
+
     tableBody.appendChild(newRow)
-    //newRow.appendChild(cellOne, cellTwo, cellThree, cellFour);
-    //, cellTwo, cellThree, cellFour
 }
 
 
