@@ -1,6 +1,6 @@
 // * TODO: CHECK FREECODECAMP AS AN ALTERNATE FOR PRACTICE
 // * TODO: New book button that brings up the form from each display - LEARNT: How to toggle elements between hidden and visible using classlist.toggle and the "hidden" attribute
-// TODO: Write each book to table row OR append each object Book to a new div
+// * TODO: Write each book to table row OR append each object Book to a new div
 // TODO: Add delete button functionality
 // TODO: Add "Read/Unread" button functionality
 // TODO: CSS - Style for table - Center table
@@ -12,40 +12,23 @@ const saveBtn = document.querySelector("#saveButton")
 const newBookBtn = document.querySelector("#new_book_button")
 const tableDisplay = document.querySelector("table")
 const returnBtn = document.querySelector("#returnButton")
-
+const container = document.querySelector(".container")
+const tableBody = document.querySelector(".table-body")
 
 
 // Assigning each textbox content of the entered Book to a variable
-let bookTitle = document.querySelector("#book_title").value
-let bookAuthor = document.querySelector("#book_author").value
-let bookPages = document.querySelector("#book_pages").value
-let bookFinish = document.querySelector("#book_finished").value
+let bookTitle = document.querySelector("#book_title")
+let bookAuthor = document.querySelector("#book_author")
+let bookPages = document.querySelector("#book_pages")
+let bookFinish = document.querySelector("#book_finished")
 
 
-// E.Listener which creates and adds book to library
-saveBtn.addEventListener("click", () => {
-     
-    let newBook = bookTitle
-    newBook = new Book (bookTitle, bookAuthor, bookPages, bookFinish)
-    addToLibrary(newBook);
-    clearForm();
-    displayLibrary();
-})
-
-// Two below - calls the function for visibility between the form page for a new book and the info page for current books
-newBookBtn.addEventListener("click", () => {
-    toggle();
-})
-
-returnBtn.addEventListener("click", () => {
-    toggle();
-})
 
 // My library array
 let myLibrary = [];
 
 // Creating an object with a function in it to display info
-Book = (title, author, pages, complete) => {
+function Book (title, author, pages, complete){
     this.title = title
     this.author = author 
     this.pages = pages
@@ -58,8 +41,13 @@ Book = (title, author, pages, complete) => {
 }
 
 // Push the args into the library array
-addToLibrary = (obj) => {
-    myLibrary.push(obj);
+addToLibrary = () => {
+    let title = bookTitle.value;
+    let author = bookAuthor.value;
+    let pages = bookPages.value;
+    let readBook = bookFinish.value; 
+    let newBook = new Book(title, author, pages, readBook)
+    myLibrary.push(newBook);
 }
 
 // Function to loop through array and display each book 
@@ -84,6 +72,59 @@ toggle = () => {
     tableDisplay.classList.toggle("hidden")
     newBookBtn.classList.toggle("hidden")
 }
+
+
+displayBook = () => {
+
+    // let div = document.createElement("row")
+    // let divTwo = document.createElement("row")
+    // createdBook.bookTitle, createdBook.bookAuthor, createdBook.bookPages, createdBook.bookFinish
+    let obj = myLibrary.slice(-1)[0]
+    let newRow = document.createElement("tr")
+//     div.textContent = obj.title
+//     container.appendChild(div);
+//     divTwo.textContent = obj.author
+//     container.appendChild(divTwo);
+    let cellOne = document.createElement("td")
+    cellOne.textContent = obj.title
+    newRow.appendChild(cellOne)
+    //cellOne.appendChild(obj.title)
+    let cellTwo = document.createElement("td")
+    cellTwo.textContent = obj.author
+    newRow.appendChild(cellTwo)
+    let cellThree = document.createElement("td")
+    cellThree.textContent = obj.pages
+    newRow.appendChild(cellThree)
+    let cellFour = document.createElement("td")
+    cellFour.textContent = obj.complete
+    newRow.appendChild(cellFour)
+    tableBody.appendChild(newRow)
+    //newRow.appendChild(cellOne, cellTwo, cellThree, cellFour);
+    //, cellTwo, cellThree, cellFour
+}
+
+
+// E.Listener which creates and adds book to library
+saveBtn.addEventListener("click", () => {
+     
+    // let newBook = bookTitle
+    // newBook = new Book(bookTitle.value, bookAuthor.value, bookPages.value, bookFinish.value)
+    addToLibrary();
+    displayBook();
+    clearForm();
+    toggle();
+    displayLibrary();
+})
+
+// Two below - calls the function for visibility between the form page for a new book and the info page for current books
+newBookBtn.addEventListener("click", () => {
+    toggle();
+})
+
+returnBtn.addEventListener("click", () => {
+    toggle();
+})
+
 
 // Making new books to populate the library
 // const inheritance = new Book("Inheritance", "Christopher Paolini", "601 pages", "Read")
