@@ -48,6 +48,9 @@ addToLibrary = () => {
     let readBook = bookFinish.value; 
     let newBook = new Book(title, author, pages, readBook)
     myLibrary.push(newBook);
+    // let newBookDiv = document.createElement("div") // Another attempt
+    // newBookDiv.append(newBook);
+    // container.appendChild(newBookDiv);
 }
 
 // Function to loop through array and display each book 
@@ -97,6 +100,8 @@ displayBook = () => {
     newRow.appendChild(cellFour)
 
     tableBody.appendChild(newRow)
+
+    // Try the other method of writing the content to a div and then appending that div to the container
 }
 
 
@@ -122,6 +127,9 @@ returnBtn.addEventListener("click", () => {
 })
 
 
+// Previous Testing code for Object library
+// ----------------------------------------------------------------------------------------------------------------
+
 // Making new books to populate the library
 // const inheritance = new Book("Inheritance", "Christopher Paolini", "601 pages", "Read")
 // const harryPotter = new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", "280 pages", "Read")
@@ -137,3 +145,30 @@ returnBtn.addEventListener("click", () => {
 // addToLibrary(mindset);
 
 // displayLibrary();
+
+/*
+I've managed to get the library working ie. every new book is pushed to the library array, my problem is reading the new book(object). 
+
+So the function currently grabs the last book object in the array, makes a new row, writes each key value to a new cell and appends each cell to the row and then appends the row to the table. Where I am stuck now is adding functionality for a delete button
+to actually access it the specified object. 
+
+I've searched on stack overflow and googled various options but I can't seem to find anything relevant, how can I access an object inside an array, whilst also being able 
+to display it? I've been stuck for a week on this. TOP project page suggests "You will need to associate your DOM elements with the actual book objects in some way. One easy solution is giving them a data-attribute that corresponds to the index of the library array."
+but I am honestly stumped. Any advice would be appreciated. 
+
+- You will need to associate your DOM elements with the actual book objects in some way. One easy solution is giving them a data-attribute that corresponds to the index of the library array
+This is honestly the easiest way, but for it to work properly, you can't be rendering the books 1 by 1. What you want to do, is every time a book is deleted or added, re-render the entire array. 
+If you use a loop to do this, you will be able to access the index of each element in the array on each loop iteration and attach it to the DOM element somehow, like with a data attribute (look it up if you don't know it).
+
+------------------------------------------------------------------------------------------------
+// Why do I get so scared/anxious to procratinate programming? It isn't the difficulty, I think it is because I'm worried about the quality of my work, and not meeting my expectations. 
+// I've proven to myself I can overcome anything, learn anything, change anything, control my mind, tackle the biggest challenges and so much more. This performance anxiety is not suiting me
+// I truly do believe in myself. I just need to remember that I do when tackling programming and tell myself it is ok to fail here because failing is how you test the program out and improve it
+// It is digital Lego building. I can create, and combine here and once coupled with my creativity...I will be more of a monster. So don't be scared thanks to "Avoidance". The worst that can happen
+// is that I will fail yet I have to fail to improve. I love acquiring theoretical knowledge. This is the acquisition of practical knowledge. Don't worry about the future, or past, just focus on 
+// being you, working at it this time. I love creating, I love building and I love being me. Acquiring knowledge is what I love, this is a form of it. Tackle it the same way I would reading books. 
+// I believe in myself. I've no doubt I can do it. 
+// My hourly rate is R50 000 per hour :D . Treat my time as such
+
+
+*/
