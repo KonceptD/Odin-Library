@@ -161,14 +161,14 @@ This is honestly the easiest way, but for it to work properly, you can't be rend
 If you use a loop to do this, you will be able to access the index of each element in the array on each loop iteration and attach it to the DOM element somehow, like with a data attribute (look it up if you don't know it).
 
 ------------------------------------------------------------------------------------------------
-// Why do I get so scared/anxious to procratinate programming? It isn't the difficulty, I think it is because I'm worried about the quality of my work, and not meeting my expectations. 
-// I've proven to myself I can overcome anything, learn anything, change anything, control my mind, tackle the biggest challenges and so much more. This performance anxiety is not suiting me
-// I truly do believe in myself. I just need to remember that I do when tackling programming and tell myself it is ok to fail here because failing is how you test the program out and improve it
-// It is digital Lego building. I can create, and combine here and once coupled with my creativity...I will be more of a monster. So don't be scared thanks to "Avoidance". The worst that can happen
-// is that I will fail yet I have to fail to improve. I love acquiring theoretical knowledge. This is the acquisition of practical knowledge. Don't worry about the future, or past, just focus on 
-// being you, working at it this time. I love creating, I love building and I love being me. Acquiring knowledge is what I love, this is a form of it. Tackle it the same way I would reading books. 
-// I believe in myself. I've no doubt I can do it. 
-// My hourly rate is R50 000 per hour :D . Treat my time as such
+Why do I get so scared/anxious to procratinate programming? It isn't the difficulty, I think it is because I'm worried about the quality of my work, and not meeting my expectations. 
+I've proven to myself I can overcome anything, learn anything, change anything, control my mind, tackle the biggest challenges and so much more. This performance anxiety is not suiting me
+I truly do believe in myself. I just need to remember that I do when tackling programming and tell myself it is ok to fail here because failing is how you test the program out and improve it
+It is digital Lego building. I can create, and combine here and once coupled with my creativity...I will be more of a monster. So don't be scared thanks to "Avoidance". The worst that can happen
+is that I will fail yet I have to fail to improve. I love acquiring theoretical knowledge. This is the acquisition of practical knowledge. Don't worry about the future, or past, just focus on 
+being you, working at it this time. I love creating, I love building and I love being me. Acquiring knowledge is what I love, this is a form of it. Tackle it the same way I would reading books. 
+I believe in myself. I've no doubt I can do it. 
+My hourly rate is R50 000 per hour :D . Treat my time as such
 
 
 */
